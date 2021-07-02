@@ -54,12 +54,12 @@
     #right{ right:0;}
 
     </style>
-		<script type="application/javascript">
+    <script type="application/javascript">
 
-		  <?php
-
-      	$dir = './DS-Screenshots';
- 				$files = scandir($dir);
+      <?php
+        
+        $dir = './DS-Screenshots';
+        $files = scandir($dir);
 
         if(isset($_GET['index']))  {
           echo "var index = " . $_GET['index'] . ";\n";
@@ -67,12 +67,12 @@
           echo "var index = " . rand(1, sizeof($files)) . ";\n";
         }
 
- 				echo "var images = [\n";
+        echo "      var images = [\n";
  				for($x = 2; $x <= sizeof($files)-2; $x++)	{
- 			  	echo "\"" . $files[$x] . "\",\n";
+ 			  	echo "        \"" . $files[$x] . "\",\n";
  			  }
         echo "        \"" . $files[sizeof($files)-1] . "\"\n";
-        echo "];\n";
+        echo "      ];\n";
 
  			?>
 
@@ -99,21 +99,14 @@
         }
         load();
       }
-
-		</script>
-
-
-	</head>
-
+    </script>
+  </head>
 	<body onload="load()">
-
     <div id="cont">
       <img id="image" src="image.png"/>
       <a id="left"  onclick="prev()">&lt;</a>
       <a id="right" onclick="next()">&gt;</a>
     </div>
     <p id="pindex">0</p>
- 
 	</body>
-
 </html>
