@@ -1,6 +1,11 @@
 <html>
 	<head>
-		<title>Gallery</title>
+		<title>DS-Gallery</title>
+    <meta content="DS-Gallery" property="og:title" />
+    <meta content="Dark Souls Gallery" property="og:description" />
+    <meta content="" property="og:url" />
+    <meta content="" property="og:image" />
+    <meta content="#99FFCA" name="theme-color" /> 
     <style>
 
     *{
@@ -76,10 +81,16 @@
 
  			?>
 
+      function update_meta()  {
+        document.querySelector('meta[property="og:url"]').setAttribute("content", "http://www.xvk3.net/gallery.php?index=" + window.index);
+        document.querySelector('meta[property="og:image"]').setAttribute("content", "http://www.xvk3.net/DS-Screenshots/" + window.images[window.index]);
+      }
+
       function load()  {
         document.getElementById("image").src = "DS-Screenshots/" + window.images[window.index];
         document.getElementById("pindex").innerHTML = window.index;
         window.history.replaceState(null, null, "?index=" + window.index);
+        update_meta();
       }
 
       function next() {
