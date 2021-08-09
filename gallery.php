@@ -58,6 +58,23 @@
     #left { left:0;}
     #right{ right:0;}
 
+    #rand a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: 70px;
+  
+      font-size: 2em;
+      font-weight: bold;
+      background: #fff;
+      color: #000;
+      opacity: .2;
+  
+      transition: .5s ease;
+    }
+
     </style>
     <script type="application/javascript">
 
@@ -110,6 +127,12 @@
         }
         load();
       }
+
+      function rand() {
+        window.index = Math.floor(Math.random() * (window.images.length));
+        load();
+      }
+
     </script>
   </head>
 	<body onload="load()">
@@ -117,6 +140,9 @@
       <img id="image" src="image.png"/>
       <a id="left"  onclick="prev()">&lt;</a>
       <a id="right" onclick="next()">&gt;</a>
+    </div>
+    <div id="rand">
+      <a id="rand" onclick="rand()">?</a>
     </div>
     <p id="pindex">0</p>
 	</body>
