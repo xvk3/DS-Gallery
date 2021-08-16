@@ -26,7 +26,7 @@
       overflow: hidden;
     }
 
-    #cont a {
+    #cont a.vert {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -44,9 +44,32 @@
       transition: .5s ease;
     }
 
-    #cont a:hover {
+    #cont a.hori {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 70px;
+  
+      font-size: 2em;
+      font-weight: bold;
+      background: #fff;
+      color: #000;
+      opacity: .2;
+  
+      transition: .5s ease;
+    }
+
+    #cont a.vert:hover {
       opacity: 0.8;
       width: 90px;
+      transition: .75s ease;
+    }
+
+    #cont a.hori:hover {
+      opacity: 0.8;
+      height: 90px;
       transition: .75s ease;
     }
 
@@ -57,8 +80,8 @@
 
     #left { left:0;}
     #right{ right:0;}
-
-    #rand a {
+    #rand { bottom:0;}
+    /*#rand a {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,7 +96,7 @@
       opacity: .2;
   
       transition: .5s ease;
-    }
+    }*/
 
     </style>
     <script type="application/javascript">
@@ -138,11 +161,9 @@
 	<body onload="load()">
     <div id="cont">
       <img id="image" src="image.png"/>
-      <a id="left"  onclick="prev()">&lt;</a>
-      <a id="right" onclick="next()">&gt;</a>
-    </div>
-    <div id="rand">
-      <a id="rand" onclick="rand()">?</a>
+      <a id="left" class="vert"  onclick="prev()">&lt;</a>
+      <a id="right" class="vert" onclick="next()">&gt;</a>
+      <a id="rand" class="hori" onclick="rand()">?</a>
     </div>
     <p id="pindex">0</p>
 	</body>
