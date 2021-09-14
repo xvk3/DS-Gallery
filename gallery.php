@@ -156,6 +156,16 @@
         load();
       }
 
+      document.onkeydown = function(event) {
+        switch (event.keyCode)  {
+          case 37:
+            prev();
+            break;
+          case 39:
+            next();
+            break;
+        }
+      }
     </script>
   </head>
 	<body onload="load()">
