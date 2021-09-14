@@ -1,5 +1,7 @@
 # Gallery for Dark Souls screenshots
 
+[Link to gallery](http://www.xvk3.net/gallery.php?index=74)
+
 ### TODO:
  - [ ] - Rename all images
  - [ ] - Add descriptions to images?
