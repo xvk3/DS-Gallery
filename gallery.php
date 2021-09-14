@@ -114,9 +114,9 @@
 
         echo "      var images = [\n";
  				for($x = 2; $x <= sizeof($files)-2; $x++)	{
- 			  	echo "        \"" . $files[$x] . "\",\n";
+ 			  	echo "        \"" . $files[$x] . "\",  // " . strval($x - 2) . "\n";
  			  }
-        echo "        \"" . $files[sizeof($files)-1] . "\"\n";
+        echo "        \"" . $files[sizeof($files)-1] . "\"   // " . strval($x - 2) . "\n";
         echo "      ];\n";
 
  			?>
