@@ -10,3 +10,4 @@
  - [x] - Random image button (Needs UI improvements)
  - [ ] - Need a better way to sync Git repo to xvk3.net/DS-Screenshots/
  - [ ] - Upload image?
+ - [ ] - Ensure index X always returns image X
